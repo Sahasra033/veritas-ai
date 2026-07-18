@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "widgets": [
+    {
+      "uri": "/veritas-ai",
+      "name": "Veritas AI",
+      "description": "Displays the result of the Veritas AI multi-agent verification system.",
+      "examples": [
+        {
+          "name": "Verification Example",
+          "description": "Sample verification result",
+          "data": {
+            "claim": "Earthquake in Delhi",
+            "verdict": "LIKELY TRUE",
+            "confidence": 78,
+            "risk": "MEDIUM",
+            "recommendation": "Wait for official confirmation.",
+            "agents": {
+              "news": {
+                "status": "FOUND",
+                "confidence": 90,
+                "summary": "Multiple trusted news sources reported the event."
+              },
+              "government": {
+                "status": "PARTIAL",
+                "confidence": 65,
+                "summary": "Government confirmation is still pending."
+              },
+              "evidence": {
+                "images": 8,
+                "videos": 4,
+                "summary": "Images and videos are available."
+              },
+              "timeline": {
+                "summary": "Event timeline is consistent."
+              },
+              "credibility": {
+                "score": 60,
+                "level": "MEDIUM",
+                "trustedSourcesFound": 3
+              }
+            }
+          }
+        }
+      ],
+      "tags": [
+        "veritas",
+        "fact-check",
+        "verification",
+        "multi-agent"
+      ]
+    }
+  ],
+  "generatedAt": "2026-07-18T00:00:00.000Z"
+}
