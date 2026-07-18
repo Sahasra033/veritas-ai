@@ -26,50 +26,7 @@ export class CalculatorTools {
       }
     }
   })
-  @Widget('calculator-result')
-  async calculate(input: any, ctx: ExecutionContext) {
-    ctx.logger.info('Performing calculation', {
-      operation: input.operation,
-      a: input.a,
-      b: input.b
-    });
-
-    let result: number;
-    let symbol: string;
-
-    switch (input.operation) {
-      case 'add':
-        result = input.a + input.b;
-        symbol = '+';
-        break;
-      case 'subtract':
-        result = input.a - input.b;
-        symbol = '-';
-        break;
-      case 'multiply':
-        result = input.a * input.b;
-        symbol = '×';
-        break;
-      case 'divide':
-        if (input.b === 0) {
-          throw new Error('Cannot divide by zero');
-        }
-        result = input.a / input.b;
-        symbol = '÷';
-        break;
-      default:
-        throw new Error('Invalid operation');
-    }
-
-    return {
-      operation: input.operation,
-      a: input.a,
-      b: input.b,
-      result,
-      expression: `${input.a} ${symbol} ${input.b} = ${result}`
-    };
-  }
-
+ 
   @Tool({
     name: 'convert_temperature',
     description: 'Convert temperature units based on file content or direct input. Supports Celsius (C) and Fahrenheit (F).',
